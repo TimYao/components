@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>csdn login</title>
+    <style>
+      /*
+        布局
+        皮肤
+        状态
+        组件
+        模式
+      */
+      html{
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+      *{
+        margin: 0;
+        padding: 0;
+        -moz-box-sizing: inherit;
+        -webkit-box-sizing: inherit;
+        box-sizing: inherit;
+      }
+      .hide{
+        display: none;
+      }
+      /*
+        基本容器布局
+      */
+      .login-containter{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: 300px; /*default width*/
+      }
+      .login-content{
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        border: 1px solid #000;
+      }
+      /*
+        组件名：login-user-component
+      */
+      .login-user-component .login-tab__active{
+        display: inline-block;
+      }
+      /*
+        皮肤: login-skin
+      */
+    </style>
+  </head>
+  <body>
+
+    <div class="demo-wrap">
+        <div class="login-containter login-user-component login-skin" data-classMark = ".mark" data-switch-tab = ".js_login_tab" data-switch-pannel=".js_login_pannel" id="js_login_user">
+            <div class="login-content">
+                <div class="login-top">
+                  <a href="" class="link-tab js_login_tab">tab1</a>
+                  <a href="" class="link-tab js_login_tab">tab2</a>
+                </div>
+                <div class="login-taps">
+                  <div class="login-pannel login-one js_login_pannel">
+                    <div class="login-form">
+                      <div class="formControl">
+                        <label for="username">login:</label>
+                        <input type="text" id="username" class="js_validate_input" validate />
+                      </div>
+                      <div class="formControl">
+                          <label for="userpwd">pwd:</label>
+                          <input type="password" id="userpwd" class="js_validate_input" validate/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="login-pannel login-two js_login_pannel hide">tab content2</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" data-main="./dist/js/scripts/login" src="./src/js/libs/require.js"></script>
+  </body>
+</html>
